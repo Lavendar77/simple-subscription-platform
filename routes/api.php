@@ -24,7 +24,7 @@ Route::prefix('websites')->group(function () {
         Route::post('/subscribe', [SubscriberController::class, 'store']);
         Route::post('/unsubscribe/{subscriber:email}', [SubscriberController::class, 'destroy']);
 
-        Route::middleware([PreventUnauthorizedAccesskey::class])->prefix('posts')->group(function () {
+        Route::prefix('posts')->group(function () {
             Route::get('', [PostController::class, 'index']);
             Route::post('', [PostController::class, 'store']);
         });
