@@ -16,7 +16,7 @@ class CreateSubscribersTable extends Migration
         Schema::create('subscribers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('website_id')->constrained();
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->string('email');
             $table->timestamps();
 

@@ -15,7 +15,7 @@ class WebsiteFactory extends Factory
     {
         return [
             'name' => ucfirst($this->faker->unique()->domainWord()),
-            'url' => $this->faker->domainName(),
+            'domain' => $this->faker->domainName(),
         ];
     }
 }
