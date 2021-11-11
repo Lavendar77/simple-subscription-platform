@@ -16,9 +16,9 @@ class PostObserver
      */
     public function created(Post $post)
     {
-        $users = $post->website->subscribers;
+        $subscribers = $post->website->subscribers;
 
-        Notification::send($users, new NewPostCreatedNotification($post));
+        Notification::send($subscribers, new NewPostCreatedNotification($post));
     }
 
     /**
