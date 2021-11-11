@@ -2,19 +2,18 @@
 
 namespace Database\Seeders;
 
+use App\Models\Website;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class WebsiteSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call([
-            WebsiteSeeder::class,
-        ]);
+        Website::factory()->count(5)->create();
     }
 }
