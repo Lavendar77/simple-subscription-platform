@@ -45,7 +45,6 @@ class NewPostCreatedNotification extends Notification implements ShouldQueue
     {
         return (new MailMessage())
             ->subject('We have a new post for you!')
-            ->greeting('')
             ->line(new HtmlString("<b>{$this->post->title}</b>"))
             ->line($this->post->description)
             ->line('Thank you for using our application!');
